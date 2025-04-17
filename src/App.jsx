@@ -4,9 +4,10 @@ import Formulario from "./components/Formulario";
 import Tabela from "./components/Tabela";
 
 function App() {
+  const [indiceVetor, setIndiceVetor] = useState("");
   const [btnCadastrar, setBtnCadastrar] = useState(true);
   const [nome, setNome] = useState("");
-  const [idade, setIdade] = useState(0);
+  const [idade, setIdade] = useState("");
   const [cidade, setCidade] = useState("");
   const [vetor, setVetor] = useState([]);
 
@@ -16,6 +17,15 @@ function App() {
     setNome("");
     setIdade("");
     setCidade("");
+  };
+
+  const selecionar = (indice) => {
+    setIndiceVetor(indice);
+    setNome(vetor[indice].nome);
+    setIdade(vetor[indice].idade);
+    setCidade(vetor[indice].cidade);
+
+    setBtnCadastrar(false);
   };
 
   return (
@@ -30,7 +40,7 @@ function App() {
         idade={idade}
         cidade={cidade}
       />
-      <Tabela vetor={vetor} />
+      <Tabela vetor={vetor} selecionar={selecionar} />
     </>
   );
 }
