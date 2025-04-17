@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./App.css";
 import Formulario from "./components/Formulario";
 import Tabela from "./components/Tabela";
+import "./App.css";
 
 function App() {
   const [indiceVetor, setIndiceVetor] = useState("");
@@ -11,6 +11,7 @@ function App() {
   const [cidade, setCidade] = useState("");
   const [vetor, setVetor] = useState([]);
 
+  //funcao para cadastrar usuarios
   const cadastrar = () => {
     let obj = { nome: nome, idade: idade, cidade: cidade };
     setVetor([...vetor, obj]);
@@ -19,13 +20,32 @@ function App() {
     setCidade("");
   };
 
+  //funcao para selecionar usuario
   const selecionar = (indice) => {
     setIndiceVetor(indice);
     setNome(vetor[indice].nome);
     setIdade(vetor[indice].idade);
     setCidade(vetor[indice].cidade);
 
+    //esconde o cadastrar e mostra o outros botoes
     setBtnCadastrar(false);
+  };
+
+  //funcao para alterar os dados do usuario
+  const alterar = () => {
+    let obj = { nome: nome, idade: idade, cidade: cidade };
+    //copia do vetor original
+    let copiaVetor = [...vetor];
+    //copia vetor recebe o indice em que esta o usuario e altera colocando os dados novos vindos do obj
+    copiaVetor[indiceVetor] = obj;
+    //seta novo valor que recebe do copiaVetor
+    setVetor(copiaVetor);
+    //limpa os campos
+    setNome("");
+    setIdade("");
+    setCidade("");
+    //retorna botao cadastrar
+    setBtnCadastrar(true);
   };
 
   return (
@@ -36,6 +56,7 @@ function App() {
         setIdade={setIdade}
         setCidade={setCidade}
         cadastrar={cadastrar}
+        alterar={alterar}
         nome={nome}
         idade={idade}
         cidade={cidade}
