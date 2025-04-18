@@ -1,8 +1,20 @@
-# React + Vite
+# CRUD com React.js ⚛
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CRUD de cadastro de usuarios onde é possivel cadastrar nome, idade e cidade.
 
-Currently, two official plugins are available:
+## Tecnologias utilizadas
+- 👅 Javascript
+- ⚛️ React.js
+- 🎨 Bootstrap 5
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tela inicial
+![tela-vazia](https://github.com/user-attachments/assets/2e4f4be4-d2a7-407e-83e0-cd6c01a5ae01)
+
+## Tela com usuarios cadastrados
+![tela-users](https://github.com/user-attachments/assets/56d5001f-69c2-4c2a-b289-8a6f8056898d)
+
+## Tela de edição selecionada com botão "Selecionar"
+![tela-edit](https://github.com/user-attachments/assets/120f44aa-e5da-4591-8d27-c7248b179349)
+
+## Tabela com -1 usuario apos "Excluir" ser selecionado
+![final-tela](https://github.com/user-attachments/assets/156cf3cd-b250-46fd-84a3-5309cae4ab33)
