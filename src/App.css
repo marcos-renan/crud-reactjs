@@ -10,3 +10,8 @@ form input{
 form input[type='button']{
     margin-right: 10px;
 }
+
+.pesquisar{
+    width: 50%;
+    margin: 2% auto;
+}
