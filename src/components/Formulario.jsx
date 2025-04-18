@@ -5,6 +5,8 @@ function Formulario({
   setCidade,
   cadastrar,
   alterar,
+  remover,
+  cancelar,
   nome,
   idade,
   cidade,
@@ -51,8 +53,18 @@ function Formulario({
               className="btn btn-success"
               onClick={alterar}
             />
-            <input type="button" value="Excluir" className="btn btn-danger" />
-            <input type="button" value="Cancelar" className="btn btn-secondary" />
+            <input
+              type="button"
+              value="Excluir"
+              className="btn btn-danger"
+              onClick={remover}
+            />
+            <input
+              type="button"
+              value="Cancelar"
+              className="btn btn-secondary"
+              onClick={cancelar}
+            />
           </>
         )}
       </form>

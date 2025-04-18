@@ -48,6 +48,32 @@ function App() {
     setBtnCadastrar(true);
   };
 
+  //funcao para remover usuario
+  const remover = () => {
+    //copia do vetor original
+    let copiaVetor = [...vetor];
+    //recebe o indice e apaga uma unica linha
+    copiaVetor.splice(indiceVetor, 1);
+    //seta o vetor
+    setVetor(copiaVetor);
+    //limpa os campos
+    setNome("");
+    setIdade("");
+    setCidade("");
+    //retorna botao cadastrar
+    setBtnCadastrar(true);
+  }
+
+  //funcao para cancelar edicao
+  const cancelar = () => {
+    //limpa os campos
+    setNome("");
+    setIdade("");
+    setCidade("");
+    //retorna botao cadastrar
+    setBtnCadastrar(true);
+  }
+
   return (
     <>
       <Formulario
@@ -57,6 +83,8 @@ function App() {
         setCidade={setCidade}
         cadastrar={cadastrar}
         alterar={alterar}
+        remover={remover}
+        cancelar={cancelar}
         nome={nome}
         idade={idade}
         cidade={cidade}
