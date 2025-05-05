@@ -3,9 +3,9 @@
 CRUD de cadastro de usuarios onde é possivel cadastrar nome, idade e cidade.
 
 ## Tecnologias utilizadas
-- 👅 Javascript
-- ⚛️ React.js
-- 🎨 Bootstrap 5
+-   <img src="https://skillicons.dev/icons?i=js" height="16" alt="javascript logo"  />  Javascript
+- <img src="https://skillicons.dev/icons?i=react" height="16" alt="react logo"  />  React.js
+- <img src="https://skillicons.dev/icons?i=bootstrap" height="16" alt="bootstrap logo"  />  Bootstrap 5
 
 ## Tela inicial
 ![tela-vazia](https://github.com/user-attachments/assets/2e4f4be4-d2a7-407e-83e0-cd6c01a5ae01)
